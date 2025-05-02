@@ -1,0 +1,107 @@
+.login-container {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #ff0000, #9b2d2d);
+  }
+  
+  .login-card {
+    background: linear-gradient(135deg, #1a0033, #cc0033);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 0 15px #ff6666;
+  }
+  
+  .user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #00bfff;
+    padding: 5px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid white;
+  }
+  
+  form {
+    margin-top: 50px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .forget-password {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .forget-password a {
+    font-size: 13px;
+    color: #f8c291;
+    text-decoration: none;
+  }
+  
+  .forget-password a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    background-color: #d4af37;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #c9a23a;
+  }
+  
+  .signup-text {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .signup-text a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+  

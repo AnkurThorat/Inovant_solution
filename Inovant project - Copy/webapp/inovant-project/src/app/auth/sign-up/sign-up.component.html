@@ -1,0 +1,84 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <img
+      src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png"
+      alt="user"
+      class="user-image"
+    />
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="signupForm" class="form">
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input
+          type="text"
+          id="first_name"
+          formControlName="first_name"
+          placeholder="First Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+        <input
+          type="text"
+          id="last_name"
+          formControlName="last_name"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone_number">Phone Number:</label>
+        <input
+          type="text"
+          id="phone_number"
+          formControlName="phone_number"
+          placeholder="Phone Number"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        />
+      </div>
+
+      <button type="submit">Sign Up</button>
+
+      <p class="login-text">
+        Already have an account?
+        <a [routerLink]="['/login']">Login</a> here.
+      </p>
+    </form>
+  </div>
+</div>

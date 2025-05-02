@@ -1,0 +1,128 @@
+<div class="home-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul class="sidebar__list">
+      <li class="sidebar__item">
+        <a routerLink="/home" class="sidebar__link">
+          <i class="fa-solid fa-headphones"></i> <span>Edit Profile</span>
+        </a>
+      </li>
+      <li class="sidebar__item">
+        <a routerLink="/delete-account" class="sidebar__link">
+          <i class="fas fa-trash-alt"></i>
+          <span>Delete Account</span>
+        </a>
+      </li>
+      <li class="sidebar__item sidebar__item--logout">
+        <a (click)="logout()" class="sidebar__link">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- <div class="card" style="width: 18rem ; margin-top: 20%;margin-bottom: 50%;margin-left: 2%;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>
+  </div> -->
+  <!-- <aside class="sidebar">
+    <ul>
+      <li><a href="#">Edit Profile</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Delete Account</a></li>
+      <li class="logout"><a href="#">Logout</a></li>
+    </ul>
+  </aside> -->
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Top Profile Card -->
+    <div class="profile-card">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        alt="User"
+        class="profile-pic"
+      />
+      <div class="user-info">
+        <h3>Test Test</h3>
+        <p>testyopmail.com</p>
+        <p>+965 9653214</p>
+      </div>
+    </div>
+
+    <!-- Personal Information Form -->
+    <section class="personal-info">
+      <h2>PERSONAL INFORMATION</h2>
+      <form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              required
+              [(ngModel)]="user.first_name"
+            />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input
+              type="text"
+              name="last_name"
+              required
+              [(ngModel)]="user.last_name"
+            />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              name="email"
+              required
+              [(ngModel)]="user.email"
+            />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              name="phone"
+              required
+              [(ngModel)]="user.phone_number"
+            />
+          </div>
+          <div class="form-group">
+            <label>Old Password</label>
+            <input type="password" name="oldPassword" ngModel />
+          </div>
+          <div class="form-group">
+            <label>New Password</label>
+            <input type="password" name="newPassword" ngModel />
+          </div>
+          <div class="form-group full-width">
+            <label>Confirm New Password</label>
+            <input type="password" name="confirmNewPassword" ngModel />
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="!infoForm.valid" class="save-btn">
+          Save
+        </button>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="quick-links">
+    <a href="#">Press</a> | <a href="#">FAQs</a> | <a href="#">Contact us</a> |
+    <a href="#">Join the team</a> |
+    <a href="#">Terms & Conditions</a>
+  </div>
+  <div class="copyright">© 2024 K-Land. All Rights Reserved.</div>
+</footer>
